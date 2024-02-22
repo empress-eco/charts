@@ -1,70 +1,72 @@
 <div align="center">
-    <img src="https://github.com/frappe/design/blob/master/logos/logo-2019/frappe-charts-logo.png" height="128">
-    <a href="https://frappe.github.io/charts">
-        <h2>Frappe Charts</h2>
-    </a>
-    <p align="center">
-        <p>GitHub-inspired modern, intuitive and responsive charts with zero dependencies</p>
-        <a href="https://frappe.io/charts">
-            <b>Explore Demos » </b>
-        </a>
-        <a href="https://codesandbox.io/s/frappe-charts-demo-viqud">
-            <b> Edit at CodeSandbox »</b>
-        </a>
-        <a href="https://frappe.io/charts/docs">
-            <b>Documentation » </b>
-        </a>
-    </p>
+![Project Logo](https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png
+<h1 align="center">Empress Charts: Deceptively Simple, Intuitively Powerful</h1>
+<p align="center">
+Elevate your data visualization with zero-dependency, Github-inspired charts crafted by Empress.
+<br />
+<a href="https://grow.empress.eco/">Explore the Docs</a>
+·
+<a href="https://github.com/empress-eco/charts/issues">Report Bug</a>
+·
+<a href="https://github.com/empress-eco/charts/issues/new">Request Feature</a>
+</p>
 </div>
 
-<p align="center">
-    <a href="https://bundlephobia.com/result?p=frappe-charts">
-        <img src="https://img.shields.io/bundlephobia/minzip/frappe-charts">
-    </a>
-</p>
+## About The Project
 
-<p align="center">
-    <a href="https://frappe.github.io/charts">
-        <img src=".github/example.gif">
-    </a>
-</p>
+### 📖 Overview
+The Empress 'charts' project is tailored for developers and data enthusiasts who desire an effortless, sleek, and intuitive way to visualize their data. It addresses the challenges of complex data visualization, offering a responsive charting library that is refreshingly simple to use and requires no dependencies.
 
-### Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contribute](https://frappe.io/charts/docs/contributing)
-* [License](#license)
+### 🌟 Key Features
+- Zero dependencies for a smoother project integration.
+- Responsive and intuitive charts that adapt to various display sizes.
+- GitHub-inspired design that is familiar and user-friendly.
+- Supports a diverse array of chart types (bar, line, scatter, pie, percentage) to suit different data visualization needs.
 
-#### Installation
+### 🛠 Built With
+This section is currently under review and will be updated with the major frameworks/libraries used in the project once available.
 
-##### Via NPM
-Install via [`npm`](https://www.npmjs.com/get-npm):
+## Getting Started
+
+### Prerequisites
+To utilize this library, you need to have [`npm`](https://www.npmjs.com/get-npm) installed on your system.
+
+### Installation
+Clone the repository using the following link:
+
+```
+https://github.com/empress-eco/charts.git
+```
+
+Install the library with npm:
 
 ```sh
-$ npm install frappe-charts
+$ npm install Empress-charts
 ```
 
-and include in your project:
+Next, include the library in your project:
+
 ```js
-import { Chart } from "frappe-charts"
+import { Chart } from "Empress-charts"
 ```
 
-Or include following for es-modules(eg:vuejs):
+For ES6 modules like Vue.js, use:
+
 ```js
-import { Chart } from 'frappe-charts/dist/frappe-charts.esm.js'
-// import css
-import 'frappe-charts/dist/frappe-charts.min.css'
+import { Chart } from 'Empress-charts/dist/Empress-charts.esm.js'
+// import CSS
+import 'Empress-charts/dist/Empress-charts.min.css'
 ```
 
-##### or include within your HTML
+Alternatively, you can include it within your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.6.1/dist/frappe-charts.min.umd.js"></script>
-<!-- or -->
-<script src="https://unpkg.com/frappe-charts@1.6.1/dist/frappe-charts.min.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/Empress-charts@1.6.1/dist/Empress-charts.min.umd.js"></script>
 ```
 
-#### Usage
+## Usage
+Here is a basic example to get you started with our library:
+
 ```js
 const data = {
     labels: ["12am-3am", "3am-6pm", "6am-9am", "9am-12am",
@@ -82,8 +84,7 @@ const data = {
     ]
 }
 
-const chart = new frappe.Chart("#chart", {  // or a DOM element,
-                                            // new Chart() in case of ES6 module with above usage
+const chart = new Chart("#chart", {
     title: "My Awesome Chart",
     data: data,
     type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
@@ -92,31 +93,21 @@ const chart = new frappe.Chart("#chart", {  // or a DOM element,
 })
 ```
 
-Or for es-modules (replace `new frappe.Chart()` with `new Chart()`):
-```diff
-- const chart = new frappe.Chart("#chart", {
-+ const chart = new Chart("#chart", {  // or a DOM element,
-                                    // new Chart() in case of ES6 module with above usage
-    title: "My Awesome Chart",
-    data: data,
-    type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
-    height: 250,
-    colors: ['#7cd6fd', '#743ee2']
-})
-```
+## Contributing
+We warmly welcome contributions! Here's how you can contribute:
 
+1. Fork the Project
+2. Clone the repo.
+3. Navigate into the project directory: `cd charts`
+4. Install dependencies: `npm install`
+5. Install npm-run-all (if necessary): `npm i npm-run-all -D`
+6. Run the app in development mode: `npm run dev`
+7. Open a Pull Request
 
-If you want to contribute:
+## License and Acknowledgements
 
-1. Clone this repo.
-2. `cd` into project directory
-3. `npm install`
-4. `npm i npm-run-all -D` (*optional --> might be required for some developers*)
-5. `npm run dev`
+### License
+This project operates under the MIT License. Your contributions will also be licensed under the MIT License.
 
-#### License
-This repository has been released under the [MIT License](LICENSE)
-
-------------------
-Project maintained by [Frappe](https://frappe.io).
-Used in [ERPNext](https://erpnext.com). Read the [blog post](https://medium.com/@pratu16x7/so-we-decided-to-create-our-own-charts-a95cb5032c97).
+### Acknowledgements
+We deeply appreciate the Empress Community for their foundational contributions to this project. Their innovative tools and dedication have been instrumental in building the functionalities we rely on. Our profound gratitude goes to them for their pioneering work and ongoing support.
